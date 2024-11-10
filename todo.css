@@ -7,7 +7,7 @@
   text-transform: capitalize;
 }
 body {
-  background-color: #dda8684a;
+  background-color: #a9a9a9;
   position: relative;
 }
 #lockBlur {
@@ -19,10 +19,11 @@ body {
 }
 /* pick a color */
 .colors {
-  background-color: #9b9b9b;
+  background-color: #ffffff51;
+  box-shadow: 0 0 1px #000;
   max-width: 16rem;
   margin: auto;
-  padding: 1rem;
+  padding: 0.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -48,10 +49,10 @@ body {
   background-color: #383838;
 }
 .colors button:nth-child(4) {
-  background-color: #7e3a18;
+  background-color: #552978;
 }
 .colors button:nth-child(5) {
-  background-color: #dadada;
+  background-color: #898989;
 }
 .color-opacity {
   opacity: 0.7;
@@ -59,7 +60,7 @@ body {
 }
 /* pick a color */
 .container {
-  /* background-color: #164c81; */
+  background-color: #782727;
   width: 98%;
   margin: 1rem auto;
   width: 100vh;
@@ -67,7 +68,7 @@ body {
   padding: 1rem;
   position: relative;
   /* height: 57rem; */
-  box-shadow: 4px 2px 5px rgb(50, 50, 50);
+  box-shadow: 0 0 5px rgb(50, 50, 50);
 }
 
 @media (max-width: 800px) {
@@ -205,47 +206,40 @@ section .done {
 /* tasks */
 
 #empty {
-  overflow-y: auto;
-  height: 28rem;
   margin-bottom: 0.5rem;
 }
-#empty::-webkit-scrollbar {
-  width: 20px;
-  background-color: #bebebe;
-}
-#empty::-webkit-scrollbar-button {
-  background-color: #1f1f1f;
-  cursor: pointer;
-}
 
-#empty::-webkit-scrollbar-thumb {
-  background-color: #616161;
-}
-#empty::-webkit-scrollbar-thumb:hover {
-  background-color: #787878;
-  cursor: pointer;
-}
-@media (max-width: 500px) {
-  #empty {
-    height: 25.3rem;
-  }
-}
 .copy {
   color: #fff;
   position: absolute;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  /* background-color: #1b735d; */
+  text-wrap: nowrap;
 }
 #mail {
+  padding-inline: 1rem;
   color: #828282;
   font-size: 2.2rem;
-  position: fixed;
-  bottom: 0;
-  left: 50%;
+  position: absolute;
+  z-index: 1000;
+  top: -5.3rem;
+  left: -1rem;
   cursor: pointer;
   margin-top: 3rem;
+  animation: mail 2s infinite ease-in-out;
+}
+@keyframes mail {
+  0% {
+    transform: translateX(.2rem);
+  }
+  50% {
+    transform: translateX(-.5rem);
+  }
+  
+  100% {
+    transform: translateX(.2rem);
+  }
 }
 #contact {
   position: fixed;
@@ -254,17 +248,18 @@ section .done {
 }
 
 #popUp {
-  width: 20rem;
+  width: 98%;
+  margin: auto;
   height: 5rem;
-  background-color: #ffffff5d;
+  background-color: #bdbdbd;
   position: absolute;
   border-radius: 1rem;
-  bottom: 7%;
+  top: 7%;
   left: 50%;
+  z-index: 1000;
   transform: translateX(-50%);
   text-align: center;
   display: none;
-
 }
 #popUp a {
   text-decoration: none;
@@ -273,7 +268,7 @@ section .done {
   font-size: 1.2rem;
   cursor: pointer;
   display: block;
-  margin-top: .5rem;
+  margin-top: 0.5rem;
 }
 #popUp a:hover {
   text-decoration: underline;
@@ -281,7 +276,7 @@ section .done {
 }
 #popUpBtn {
   padding: 0.2rem 2rem;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   color: #fff;
   background-color: rgba(207, 25, 25, 0.681);
   display: block;
@@ -289,4 +284,21 @@ section .done {
   font-size: 1.2rem;
   border: none;
   cursor: pointer;
+}
+#popUpBtn:hover{
+  background-color: #ffffff;
+  color: red;
+}
+#up {
+  position: fixed;
+  bottom: 1rem;
+  right: 2rem;
+  font-size: 3rem;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  display: none;
+  transition: 0.3s ease-in-out;
+}
+#up:hover {
+  transform: translateY(-0.5rem);
 }

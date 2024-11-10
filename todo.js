@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   const mail = document.querySelector("#mail");
 });
-
 // window.addEventListener("load", function () {
 //   const lockBlur = document.getElementById("lockBlur");
 //   let lock = prompt("Enter The Password");
@@ -154,3 +153,19 @@ popUpBtn.onclick = function () {
 };
 
 // pop up
+// up button
+const upBtn = document.getElementById("up");
+window.onscroll = function () {
+  if (window.scrollY >= 300) {
+    upBtn.style.display = "block";
+  } else {
+    upBtn.style.display = "none";
+  }
+};
+upBtn.onclick = function () {
+  window.scroll({
+    top: 0,
+    behavior: "smooth",
+  });
+};
+// up button

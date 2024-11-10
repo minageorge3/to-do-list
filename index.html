@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>To Do List</title>
+    <title>To-Do List</title>
     <link rel="stylesheet" href="todo.css" />
     <link
       rel="stylesheet"
@@ -20,13 +20,18 @@
       <button data-color="#164c81"></button>
       <button data-color="#1b735d"></button>
       <button data-color="#383838"></button>
-      <button data-color="#7e3a18"></button>
-      <button data-color="#9b9b9b"></button>
+      <button data-color="#552978"></button>
+      <button data-color="#898989"></button>
     </div>
     <!-- pick a color -->
     <div class="container" id="cont">
+      <div id="mail"><i class="fa-solid fa-envelope-circle-check"></i></div>
+      <div id="popUp">
+        <a href="mailto:white_lion_mina@yahoo.com">white_lion_mina@yahoo.com</a>
+        <button id="popUpBtn">X</button>
+      </div>
       <header>
-        <h2>todo-list</h2>
+        <h2>to-do list</h2>
         <div class="task">
           <input type="text" placeholder="add a task" />
           <button id="taskBtn">add</button>
@@ -43,12 +48,8 @@
       </div>
       <h5 class="copy">design by mina_S_George&copy;</h5>
     </div>
-    <button></button>
-    <div id="mail"><i class="fa-solid fa-envelope-circle-check"></i></div>
-    <div id="popUp">
-      <a href="mailto:white_lion_mina@yahoo.com">white_lion_mina@yahoo.com</a>
-      <button id="popUpBtn">X</button>
-    </div>
+    
+    <div id="up"><i class="fa-solid fa-circle-up"></i></div>
     <script src="todo.js"></script>
   </body>
 </html>
